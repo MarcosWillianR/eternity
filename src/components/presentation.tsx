@@ -7,10 +7,10 @@ import {useStaggerAnimation} from "@/lib/utils";
 
 type ActionProps = ComponentProps<"button">;
 
-export function Action({children, ...rest}: ActionProps) {
+export function Action({children, onClick}: ActionProps) {
   return (
     <motion.div {...useStaggerAnimation({delay: 1.3})}>
-      <Button size="xl" className="font-bold relative z-10" {...rest}>
+      <Button size="xl" className="font-bold relative z-10" onClick={onClick}>
         {children}
       </Button>
     </motion.div>
